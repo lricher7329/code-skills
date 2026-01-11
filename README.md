@@ -5,7 +5,7 @@ Reusable Claude Code skills for software development tasks.
 ## Structure
 
 ```
-skills-repo/
+code-skills/
 ├── skills/       # Coding skills
 ├── agents/       # Coding agents
 └── commands/     # Coding commands
