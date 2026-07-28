@@ -48,7 +48,7 @@ Use the meta skill-creator:
 | `debug` | Investigate bugs, trace root causes, produce minimal fixes | "use debug skill" |
 | `refactor` | Behavior-preserving structural improvements | "use refactor skill" |
 | `review` | Review PRs/diffs with structured feedback | "use review skill" |
-| `project-workflow` | Project lifecycle: living `ROADMAP.md`, milestone branches, plan-driven re-entry | "use project-workflow skill" |
+| `project-workflow` | Project lifecycle: living `ROADMAP.md`, repo tiers (reviewed/gated/direct), local verification as the merge gate, plan-driven re-entry | "use project-workflow skill" |
 
 ## Domain Patterns
 

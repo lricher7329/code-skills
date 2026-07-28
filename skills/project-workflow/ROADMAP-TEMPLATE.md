@@ -6,8 +6,10 @@
 
 ## Current State
 
+- **Tier:** <A — Reviewed | B — Gated | C — Direct>
+- **Local check:** `<make ci | pre-commit run --all-files | pytest && ruff check .>`
 - **Active milestone:** <name | none — between milestones>
-- **Branch:** `milestone/<slug>` | `main`
+- **Branch:** `milestone/<slug>` | `<default>`
 - **Next step:** <concrete next action>
 - **Updated:** YYYY-MM-DD
 
@@ -23,9 +25,11 @@ Branch: `milestone/<slug>`
 - [ ] Phase 2.1 — <description>
 - [ ] Phase 2.2 — <description>
 
-<!-- Completed milestones record their PR and merge date, e.g.:
+<!-- Completed milestones record their merge date, and PR where one exists, e.g.:
 ### M0 — <name>  `[x] complete`
 Branch: `milestone/<slug>` · PR: #12 · Merged: 2026-05-18
+### M0 — <name>  `[x] complete`     (Tier B/C, landed without a PR)
+Branch: `<default>` · Merged: 2026-05-18
 - [x] Phase 0.1 — <description>
 -->
 
