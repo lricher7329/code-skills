@@ -111,6 +111,24 @@ the only thing that catches this class, so it stays in the loop at every tier:
 - **Tier C** — where a packaging or publishing workflow exists, a red build is a real
   signal. Treat it as a follow-up task rather than a blocker on unrelated work.
 
+### Development stage
+
+A stage can lighten testing without changing a repo's tier. **Catalyst and Celeris Record
+are in alpha** (owner, 2026-11-08); every other repo keeps the rules above. In an alpha repo:
+
+Test for the change in hand. Use the checks the repo's gate selects. Where it has none, run
+lint, typecheck, migration checks and the tests for the modules you changed. Run a full suite
+only for a risky path: migrations, auth and permissions, consent, audit, survey anonymity,
+settings, dependencies or shared test setup. Don't compare a whole service on main and a
+branch unless one of those paths changed. After merging main, rerun only what main's changes
+could affect; docs-only changes need nothing. Browser walkthroughs and security reviews wait
+for a release, a demo or the hardening phase. Keep targeted runs to four workers while a gate
+is running.
+
+This wins over a repo's instruction to test more on a change with no risky path. It never
+skips a repo's landing command, such as Record's `make land`, and the full gate still runs
+before a deploy, demo or pilot. The owner decides when alpha ends.
+
 ---
 
 ## The Primary Plan: ROADMAP.md
